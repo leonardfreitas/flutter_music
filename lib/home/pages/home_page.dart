@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_music/home/widgets/last.dart';
 import 'package:flutter_music/widgets/h1.dart';
-import 'package:flutter_music/widgets/lib_card.dart';
 import 'package:flutter_music/widgets/logo.dart';
+import 'package:flutter_music/widgets/singer_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -29,38 +30,63 @@ class HomePage extends StatelessWidget {
                 child: H1('Tocadas recentemente'),
               ),
               SizedBox(height: 16.0),
+              Last(),
+              SizedBox(height: 32.0),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20.0,
+                ),
+                child: H1('Seus artitas favoritos'),
+              ),
+              SizedBox(height: 16.0),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    SizedBox(width: 20.0),
-                    LibCard(
-                      image: 'assets/images/lib1.jpg',
-                      libName: 'Dark Side',
-                      authorName: 'Pink Floyd',
-                    ),
-                    SizedBox(width: 16.0),
-                    LibCard(
-                      image: 'assets/images/lib2.jpeg',
-                      libName: 'Congumelo',
-                      authorName: 'Ventania',
-                    ),
-                    SizedBox(width: 16.0),
-                    LibCard(
-                      image: 'assets/images/lib1.jpg',
-                      libName: 'Dark Side',
-                      authorName: 'Pink Floyd',
-                    ),
-                    SizedBox(width: 16.0),
-                    LibCard(
-                      image: 'assets/images/lib2.jpg',
-                      libName: 'Dark Side',
-                      authorName: 'Pink Floyd',
-                    ),
-                    SizedBox(width: 16.0),
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    children: [
+                      SingerCard(
+                        name: 'Humberto',
+                        image: 'assets/images/singer1.jpeg',
+                      ),
+                      SizedBox(width: 16.0),
+                      SingerCard(
+                        name: 'Belchior',
+                        image: 'assets/images/singer2.jpeg',
+                      ),
+                      SizedBox(width: 16.0),
+                      SingerCard(
+                        name: 'Humberto',
+                        image: 'assets/images/singer1.jpeg',
+                      ),
+                      SizedBox(width: 16.0),
+                      SingerCard(
+                        name: 'Belchior',
+                        image: 'assets/images/singer2.jpeg',
+                      ),
+                      SizedBox(width: 16.0),
+                      SingerCard(
+                        name: 'Humberto',
+                        image: 'assets/images/singer1.jpeg',
+                      ),
+                      SizedBox(width: 16.0),
+                      SingerCard(
+                        name: 'Belchior',
+                        image: 'assets/images/singer2.jpeg',
+                      ),
+                    ],
+                  ),
                 ),
               ),
+              SizedBox(height: 32.0),
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20.0,
+                ),
+                child: H1('Feito para você'),
+              ),
+              SizedBox(height: 16.0),
+              Last(),
             ],
           ),
         ),
